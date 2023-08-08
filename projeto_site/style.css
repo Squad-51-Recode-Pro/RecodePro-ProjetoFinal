@@ -1,0 +1,72 @@
+/* Corpo do página */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* Barra de navegação */
+.bg-menu {
+    background-color: #00b074;
+}
+
+/* Página login */
+.bg-login {
+    background-image: url(/imagens/jovens_login.png);
+    background-size: cover;
+    background-position: center;
+    height: 16rem;
+    color: white;
+
+}
+
+.costum-margem {
+    margin-top: 87px;
+}
+
+.cor-link {
+    color: #00b074;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.custom-logo {
+    height: 80px;
+    width: 80px;
+    padding-bottom: 10px;
+}
+
+/* Página cadastro */
+.custom-check {
+    font-size: 12px;
+    padding-top: 10px;
+    color: #7e7f80;
+}
+
+.borda {
+    border-radius: 0 !important;
+    border-bottom: 0 !important;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2b3940;
+    padding: 15px 0 0;
+    bottom: 0;
+    font-size: 12px;
+}
+
+.style-list {
+    list-style: none;
+    padding-left: 0px;
+}
+
+.style-list li {
+    padding-bottom: 4px;
+}
