@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vagas</title>
+    <title>JobTeens - Vagas</title>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Bootstrap -->
@@ -17,10 +17,10 @@
 <body>
     <!-- Barra de navagação [Início] -->
     <header>
-        <nav class="navbar navbar-expand-md bg-menu">
+        <nav class="navbar navbar-expand-md bg-menu fixed-top shadow">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <a class="navbar-brand color-text" href="index.html">
+                    <img src="/imagens/logo2.png" alt="logo" width="50" height="45" class="d-inline-block">
                     JobTeens
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,8 +36,8 @@
                         <a class="nav-link" href="sobre.html">Sobre nós</a>
                     </div>
                     <form class="d-flex flex-column flex-md-row gap-2" role="search">
-                       <a href="login.html" class="btn btn-sm btn-outline-primary flex-fill">Login</a> 
-                       <a href="cadastro.html" class="btn btn-sm btn-primary">Cadastro</a>
+                        <a href="login.html" class="btn btn-sm flex-fill custom-btn">Login</a>
+                        <a href="cadastro.html" class="btn btn-sm custom-btn2">Cadastro</a>
                     </form>
                 </div>
             </div>
@@ -46,9 +46,121 @@
     <!-- Barra de navegação [Fim] -->
     <!-- Corpo da página [Início] -->
     <main>
-       
-        
-
+        <div class="container-fluid bg-vagas">
+            <div class="container">
+                <h1>Descubra sua próxima grande oportunidade!</h1>
+            </div>
+        </div>
+        <div class="container-fluid bg-color-form">
+            <div class="row">
+                <div class="col-md-8 py-4 mx-auto">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                        <button class="btn btn-vagas" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4">
+            <h1>Vagas</h1>
+            <h5>Oportunidades Disponíveis</h5>
+            <div class="row">
+                <div class="col-md-12 pt-4">
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Desenvolvedor Web</div>
+                                Empresa A
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Analista de Marketing</div>
+                                Empresa B
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Designer Gráfico</div>
+                                Empresa C
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Gerente de Projetos</div>
+                                Empresa D
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Assistente Administrativo</div>
+                                Empresa E
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Engenheiro de Software</div>
+                                Empresa F
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Analista de Recursos Humanos</div>
+                                Empresa G
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Consultor de Vendas </div>
+                                Empresa H
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Analista Financeiro</div>
+                                Empresa I
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex flex-column flex-sm-row gap-2">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Suporte Técnico</div>
+                                Empresa J
+                            </div>
+                            <div class="col-md-4 d-flex flex-column">
+                                <button class="btn btn-sm btn-list-vagas ms-2 my-auto">Cadastre-se</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- Corpo da página [Fim] -->
     <!-- Rodapé [Início] -->
@@ -56,12 +168,12 @@
         <div class="container-fluid p-3">
             <div class="row">
                 <div class="col-sm-2">
-                   <h6>Início</h6>
-                   <ul class="style-list">
-                    <li>Home</li>
-                    <li>Oportunidades</li>
-                    <li>Pojetos&Cursos</li>
-                   </ul>
+                    <h6>Início</h6>
+                    <ul class="style-list">
+                        <li>Home</li>
+                        <li>Oportunidades</li>
+                        <li>Pojetos&Cursos</li>
+                    </ul>
                 </div>
                 <div class="col-sm-2">
                     <h6>Sobre nós</h6>
@@ -83,8 +195,9 @@
                     <h5>Fique por dentro das novidades</h5>
                     <p>Resumo mensal do que há de novo e emocionante de nós.</p>
                     <form class="d-flex flex-column flex-sm-row gap-2">
-                        <input class="form-control form-control-sm" type="email" placeholder="Endereço de email" aria-label="email">
-                        <button class="btn btn-sm btn-primary" type="submit">Se inscreva</button>
+                        <input class="form-control form-control-sm" type="email" placeholder="Endereço de email"
+                            aria-label="email">
+                        <button class="btn btn-sm btn-footer" type="submit">Se inscreva</button>
                     </form>
                 </div>
             </div>

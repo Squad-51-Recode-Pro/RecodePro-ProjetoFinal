@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>JobTeens - Cadastro</title>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
     <!-- Bootstrap -->
@@ -17,10 +17,10 @@
 <body>
     <!-- Barra de navagação [Início] -->
     <header>
-        <nav class="navbar navbar-expand-md bg-menu">
+        <nav class="navbar navbar-expand-md bg-menu fixed-top shadow">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
-                    <img src="/imagens/logo.png" width="30" height="24" class="d-inline-block align-text-top">
+                <a class="navbar-brand color-text" href="index.html">
+                    <img src="/imagens/logo2.png" alt="logo" width="50" height="45" class="d-inline-block">
                     JobTeens
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,8 +36,8 @@
                         <a class="nav-link" href="sobre.html">Sobre nós</a>
                     </div>
                     <form class="d-flex flex-column flex-md-row gap-2" role="search">
-                        <a href="login.html" class="btn btn-sm btn-outline-primary flex-fill">Login</a>
-                        <a href="cadastro.html" class="btn btn-sm btn-primary">Cadastro</a>
+                        <a href="login.html" class="btn btn-sm flex-fill custom-btn">Login</a>
+                        <a href="cadastro.html" class="btn btn-sm custom-btn2">Cadastro</a>
                     </form>
                 </div>
             </div>
@@ -45,20 +45,26 @@
     </header>
     <!-- Barra de navegação [Fim] -->
     <!-- Corpo da página [Início] -->
-    <main class="bg-cadastro">
-        <div class="container py-5">
-            <div class="row shadow">
+    <main>
+        <div class="container-fluid px-0 bg-cadastro">
+           <div class="container">
+                <h2>Conectando empresas a jovens talentosos!</h2> 
+                <p>Explore carreiras emocionantes e divulgue vagas. Faça parte da nossa comunidade moldadora do futuro profissional na <strong>JobTeens</strong></p>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col-sm-12 px-0">
-                    <ul class="nav nav-tabs borda">
+                    <ul class="nav nav-tabs custom-form">
                         <li class="nav-item">
-                            <a class="nav-link active borda" data-bs-toggle="tab" href="#cadastrousuario">Usuário</a>
+                            <a class="nav-link active custom-form" data-bs-toggle="tab" href="#cadastrousuario">Usuário</a>
                         </li>
                         <li>
-                            <a class="nav-link borda" data-bs-toggle="tab" href="#cadastroempresa">Empresa</a>
+                            <a class="nav-link custom-form" data-bs-toggle="tab" href="#cadastroempresa">Empresa</a>
                         </li>
                     </ul>
                     <!-- Cadastro usuário [Início] -->
-                    <div class="tab-content py-4 px-4">
+                    <div class="tab-content py-5 px-4">
                         <div class="tab-pane fade show active" id="cadastrousuario">
                             <form>
                                 <div class="row">
@@ -82,8 +88,8 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mx-auto d-grid py-4">
-                                        <button class="btn btn-success">Cadastrar-se</button>
+                                    <div class="col-md-6 mx-auto d-grid py-5">
+                                        <button class="btn custom-btn-cadastro">Cadastrar-se</button>
                                     </div>
                                 </div>
                             </form>
@@ -115,8 +121,8 @@
                                             </label>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mx-auto d-grid py-4">
-                                        <button class="btn btn-success">Cadastrar-se</button>
+                                    <div class="col-md-6 mx-auto d-grid py-5">
+                                        <button class="btn custom-btn-cadastro">Cadastrar-se</button>
                                     </div>
                                 </div>
                             </form>
@@ -162,7 +168,7 @@
                     <form class="d-flex flex-column flex-sm-row gap-2">
                         <input class="form-control form-control-sm" type="email" placeholder="Endereço de email"
                             aria-label="email">
-                        <button class="btn btn-sm btn-primary" type="submit">Se inscreva</button>
+                        <button class="btn btn-sm btn-footer" type="submit">Se inscreva</button>
                     </form>
                 </div>
             </div>

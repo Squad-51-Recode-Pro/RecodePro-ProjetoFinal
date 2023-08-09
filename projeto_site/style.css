@@ -9,11 +9,73 @@ body {
 
 main {
     flex-grow: 1;
+    margin-top: 70px;
 }
 
 /* Barra de navegação */
 .bg-menu {
-    background-color: #00b074;
+    background-color: white;
+}
+
+.color-text {
+    color: #18d39a !important;
+    font-weight: bold;
+    font-size: 28px !important;
+}
+
+.custom-btn {
+    color: #18d39a !important;
+    border: 1px solid !important;
+    border-color: #18d39a;
+    margin-right: 10px;
+}
+
+.custom-btn2 {
+    color: #18d39a !important;
+    border: 1px solid !important;
+    border-color: #18d39a;
+    background-color: #18d39a !important;
+    color: white !important;
+    margin-right: 10px;
+}
+
+/* Página vagas */
+.bg-vagas {
+    background-image: url(/imagens/bg_vaga.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+    color: white;
+    padding-top: 9rem;
+}
+
+.bg-color-form {
+    background-color: #18d39a;
+}
+
+.btn-vagas {
+    background-color: white !important;
+    color: #18d39a !important;
+}
+
+.btn-list-vagas {
+    background-color: #18d39a !important;
+    color: white !important;
+}
+
+/* Página Sobre nós */
+.bg-sobre {
+    background-image: url(/imagens/bg_sobre.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+    color: white;
+    padding-top: 8rem;
+}
+
+.custom-paragrafo {
+    text-align: justify;
+    padding-top: 11px;
 }
 
 /* Página login */
@@ -21,25 +83,29 @@ main {
     background-image: url(/imagens/jovens_login.png);
     background-size: cover;
     background-position: center;
-    height: 16rem;
+    height: 36rem;
     color: white;
-
 }
 
-.costum-margem {
-    margin-top: 87px;
+.costum-margem-h1 {
+    margin-top: 190px !important;
 }
 
 .cor-link {
-    color: #00b074;
+    color: #18d39a;
     text-decoration: none;
     font-size: 12px;
 }
 
-.custom-logo {
+.logo {
     height: 80px;
     width: 80px;
     padding-bottom: 10px;
+}
+
+.btn-login {
+    background-color: #18d39a !important;
+    color: white !important;
 }
 
 /* Página cadastro */
@@ -49,17 +115,34 @@ main {
     color: #7e7f80;
 }
 
-.borda {
+.custom-form {
     border-radius: 0 !important;
-    border-bottom: 0 !important;
+    border: 0 !important;
+    background-color: #18d39a;
+    color: #476370 !important;
+}
+
+.custom-btn-cadastro {
+    background-color: #18d39a !important;
+    color: white !important;
+}
+
+.bg-cadastro {
+    background-image: url(/imagens/bg_cadastro.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 18rem;
+    color: white;
+    padding-top: 6rem;
 }
 
 /* Rodapé */
 footer {
-    background-color: #2b3940;
+    background-color: #476370;
     padding: 15px 0 0;
     bottom: 0;
     font-size: 12px;
+    color: white;
 }
 
 .style-list {
@@ -69,4 +152,9 @@ footer {
 
 .style-list li {
     padding-bottom: 4px;
+}
+
+.btn-footer {
+    background-color: #18d39a !important;
+    color: white !important;
 }
