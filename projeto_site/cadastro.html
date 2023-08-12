@@ -17,7 +17,7 @@
 <body>
     <!-- Barra de navagação [Início] -->
     <header>
-        <nav class="navbar navbar-expand-md bg-menu fixed-top shadow">
+        <nav class="navbar navbar-expand-md bg-menu shadow">
             <div class="container-fluid">
                 <a class="navbar-brand color-text" href="index.html">
                     <img src="/imagens/logo2.png" alt="logo" width="50" height="45" class="d-inline-block">
@@ -46,92 +46,100 @@
     <!-- Barra de navegação [Fim] -->
     <!-- Corpo da página [Início] -->
     <main>
-        <div class="container-fluid px-0 bg-cadastro">
-           <div class="container">
-                <h2>Conectando empresas a jovens talentosos!</h2> 
-                <p>Explore carreiras emocionantes e divulgue vagas. Faça parte da nossa comunidade moldadora do futuro profissional na <strong>JobTeens</strong></p>
+        <section>
+            <div class="container-fluid px-0 bg-cadastro">
+                <div class="container">
+                    <h2>Conectando empresas a jovens talentosos!</h2>
+                    <p>Explore carreiras emocionantes e divulgue vagas. Faça parte da nossa comunidade moldadora do
+                        futuro profissional na <strong>JobTeens</strong></p>
+                </div>
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 px-0">
-                    <ul class="nav nav-tabs custom-form">
-                        <li class="nav-item">
-                            <a class="nav-link active custom-form" data-bs-toggle="tab" href="#cadastrousuario">Usuário</a>
-                        </li>
-                        <li>
-                            <a class="nav-link custom-form" data-bs-toggle="tab" href="#cadastroempresa">Empresa</a>
-                        </li>
-                    </ul>
-                    <!-- Cadastro usuário [Início] -->
-                    <div class="tab-content py-5 px-4">
-                        <div class="tab-pane fade show active" id="cadastrousuario">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" placeholder="Nome Completo" required>
-                                    </div>
-                                    <div class="col-md-12 d-flex mt-3 gap-2">
-                                        <input type="text" class="form-control" placeholder="CEP">
-                                        <input type="tel" class="form-control" placeholder="Celular">
-                                    </div>
-                                    <div class="col-md-12 d-flex mt-3 gap-2">
-                                        <input type="email" class="form-control" placeholder="Email">
-                                        <input type="password" class="form-control" placeholder="Senha">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-check custom-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="info">
-                                            <label class="form-check-label" for="info">
-                                                Autorizo a JobTeens enviar informações sobre vagas, eventos e projetos
-                                                gratuitos de nossos parceiros e colaboradores
-                                            </label>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 px-0">
+                        <ul class="nav nav-tabs custom-form">
+                            <li class="nav-item">
+                                <a class="nav-link active custom-form" data-bs-toggle="tab"
+                                    href="#cadastrousuario">Usuário</a>
+                            </li>
+                            <li>
+                                <a class="nav-link custom-form" data-bs-toggle="tab" href="#cadastroempresa">Empresa</a>
+                            </li>
+                        </ul>
+                        <!-- Cadastro usuário [Início] -->
+                        <div class="tab-content py-5 px-4">
+                            <div class="tab-pane fade show active" id="cadastrousuario">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" placeholder="Nome Completo"
+                                                required>
+                                        </div>
+                                        <div class="col-md-12 d-flex mt-3 gap-2">
+                                            <input type="text" class="form-control" placeholder="CEP">
+                                            <input type="tel" class="form-control" placeholder="Celular">
+                                        </div>
+                                        <div class="col-md-12 d-flex mt-3 gap-2">
+                                            <input type="email" class="form-control" placeholder="Email">
+                                            <input type="password" class="form-control" placeholder="Senha">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-check custom-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="info">
+                                                <label class="form-check-label" for="info">
+                                                    Autorizo a JobTeens enviar informações sobre vagas, eventos e
+                                                    projetos
+                                                    gratuitos de nossos parceiros e colaboradores
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mx-auto d-grid py-5">
+                                            <button class="btn custom-btn-cadastro">Cadastrar-se</button>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mx-auto d-grid py-5">
-                                        <button class="btn custom-btn-cadastro">Cadastrar-se</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Cadastro usuário [Fim] -->
-                        <!-- Cadastro empresa [Início] -->
-                        <div class="tab-pane fade" id="cadastroempresa">
-                            <form>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control" placeholder="Nome da Empresa" required>
-                                    </div>
-                                    <div class="col-md-12 d-flex mt-3 gap-2">
-                                        <input type="text" class="form-control" placeholder="CNPJ" required>
-                                        <input type="text" class="form-control" placeholder="Nº de Funcionários">
-                                        <input type="text" class="form-control" placeholder="CEP">
-                                    </div>
-                                    <div class="col-md-12 d-flex mt-3 gap-2">
-                                        <input type="text" class="form-control" placeholder="Email corporativo">
-                                        <input type="tel" class="form-control" placeholder="Telefone">
-                                        <input type="password" class="form-control" placeholder="Senha">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-check custom-check">
-                                            <input class="form-check-input" type="checkbox" id="info2">
-                                            <label class="form-check-label" for="info2">
-                                                Autorizo a JobTeens enviar informações sobre vagas, eventos e projetos
-                                                gratuitos de nossos parceiros e colaboradores
-                                            </label>
+                                </form>
+                            </div>
+                            <!-- Cadastro usuário [Fim] -->
+                            <!-- Cadastro empresa [Início] -->
+                            <div class="tab-pane fade" id="cadastroempresa">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="text" class="form-control" placeholder="Nome da Empresa"
+                                                required>
+                                        </div>
+                                        <div class="col-md-12 d-flex mt-3 gap-2">
+                                            <input type="text" class="form-control" placeholder="CNPJ" required>
+                                            <input type="text" class="form-control" placeholder="Nº de Funcionários">
+                                            <input type="text" class="form-control" placeholder="CEP">
+                                        </div>
+                                        <div class="col-md-12 d-flex mt-3 gap-2">
+                                            <input type="text" class="form-control" placeholder="Email corporativo">
+                                            <input type="tel" class="form-control" placeholder="Telefone">
+                                            <input type="password" class="form-control" placeholder="Senha">
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-check custom-check">
+                                                <input class="form-check-input" type="checkbox" id="info2">
+                                                <label class="form-check-label" for="info2">
+                                                    Autorizo a JobTeens enviar informações sobre vagas, eventos e
+                                                    projetos
+                                                    gratuitos de nossos parceiros e colaboradores
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mx-auto d-grid py-5">
+                                            <button class="btn custom-btn-cadastro">Cadastrar-se</button>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 mx-auto d-grid py-5">
-                                        <button class="btn custom-btn-cadastro">Cadastrar-se</button>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
+                            <!-- Cadastro empresa [Fim] -->
                         </div>
-                        <!-- Cadastro empresa [Fim] -->
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <!-- Corpo da página [Fim] -->
     <!-- Rodapé [Início] -->

@@ -13,6 +13,12 @@ main {
 }
 
 /* Barra de navegação */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
 .bg-menu {
     background-color: white;
 }
@@ -39,6 +45,54 @@ main {
     margin-right: 10px;
 }
 
+/* Página home */
+.bg-home {
+    background-image: url(/imagens/bg_home.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+    color: white;
+    padding-top: 8rem;
+}
+
+.bg-home-color {
+    background-color: #18d39a;
+    color: white;
+}
+
+.card-img {
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+    margin-bottom: 0;
+    border-top-right-radius: 0% !important;
+    border-bottom-right-radius: 0% !important;
+} 
+
+.font-paragraf {
+    font-size: 14px;
+}
+
+.color-h1 {
+    color: #18d39a;
+}
+
+.custom-bordar {
+    border-top-right-radius: 14px; 
+    background-color: #476370;
+}
+.paragraf-home {
+    font-size: 13px;
+}
+
+.btn-home {
+    background-color: #18d39a !important;
+    color: white  !important;
+}
+
+.custom-list {
+    border-radius: 0% !important;
+}
 /* Página vagas */
 .bg-vagas {
     background-image: url(/imagens/bg_vaga.jpg);
@@ -61,6 +115,38 @@ main {
 .btn-list-vagas {
     background-color: #18d39a !important;
     color: white !important;
+}
+
+/* Página projetos&cursos */
+.bg-projeto {
+    background-image: url(/imagens/bg_projeto&cursos.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 20rem;
+    color: white;
+    padding-top: 9rem;
+}
+
+.img-card-projeto {
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+    border-top-left-radius: 2% !important;
+    border-bottom-left-radius: 2% !important;
+}
+
+.card-text {
+    text-align: justify ;
+}
+
+.font-color-card {
+    color: #18d39a !important;
+}
+
+.ancora-card {
+    color: #476370;
 }
 
 /* Página Sobre nós */
