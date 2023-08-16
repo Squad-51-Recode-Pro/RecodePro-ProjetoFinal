@@ -123,6 +123,12 @@ header {
     color: white !important;
 }
 
+.list-vagas {
+    list-style: none;
+    padding-left: 2px;
+    color: #505151;
+}
+
 /* Página projetos&cursos */
 .bg-projeto {
     background-image: url(/imagens/bg_projeto&cursos.jpg);
