@@ -47,7 +47,7 @@ header {
 
 /* Página home */
 .bg-home {
-    background-image: url(/imagens/bg_home.jpg);
+    background-image: url(imagens/bg_home.jpg);
     background-size: cover;
     background-position: center;
     height: 20rem;
@@ -101,7 +101,7 @@ header {
 
 /* Página vagas */
 .bg-vagas {
-    background-image: url(/imagens/bg_vaga.jpg);
+    background-image: url(imagens/bg_vaga.jpg);
     background-size: cover;
     background-position: center;
     height: 20rem;
@@ -131,7 +131,7 @@ header {
 
 /* Página projetos&cursos */
 .bg-projeto {
-    background-image: url(/imagens/bg_projeto&cursos.jpg);
+    background-image: url(imagens/bg_projeto&cursos.jpg);
     background-size: cover;
     background-position: center;
     height: 20rem;
@@ -163,7 +163,7 @@ header {
 
 /* Página Sobre nós */
 .bg-sobre {
-    background-image: url(/imagens/bg_sobre.jpg);
+    background-image: url(imagens/bg_sobre.jpg);
     background-size: cover;
     background-position: center;
     height: 20rem;
@@ -178,7 +178,7 @@ header {
 
 /* Página login */
 .bg-login {
-    background-image: url(/imagens/jovens_login.png);
+    background-image: url(imagens/jovens_login.png);
     background-size: cover;
     background-position: center;
     height: 36rem;
@@ -226,7 +226,7 @@ header {
 }
 
 .bg-cadastro {
-    background-image: url(/imagens/bg_cadastro.jpg);
+    background-image: url(imagens/bg_cadastro.jpg);
     background-position: center;
     background-size: cover;
     height: 18rem;
