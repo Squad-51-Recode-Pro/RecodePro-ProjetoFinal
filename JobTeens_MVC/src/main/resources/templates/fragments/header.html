@@ -1,0 +1,93 @@
+<header th:fragment="header">
+	<nav class="navbar shadow py-2">
+		<div class="container-fluid d-flex">
+			<h4>
+				<a class="titleNav d-flex align-items-center" href="#">
+					<img src="/img/logo.png" height="50" width="50">
+					JobTeens
+				</a>
+			</h4>
+			<button class="btn btnAside border-0 d-lg-none d-md-block" type="button" data-bs-toggle="offcanvas"
+				data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+				<i class="bi bi-list fs-2"></i>
+			</button>
+			<!-- Inicio Offcanvas -->
+			<div class="offcanvas offcanvas-start border-0" data-bs-scroll="true" data-bs-backdrop="false"
+				id="offcanvasScrolling" aria-labelledby="offcanvasLabel" style="width: 255px;">
+				<div class="offcanvas-header">
+					<h4 id="offcanvasLabel">
+						<a class="titleCanvas" href="#">
+							<img src="/img/logo.png" height="45" width="45">
+							JobTeens
+						</a>
+					</h4>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="list-unstyled px-2">
+						<!-- Usuários -->
+						<li class="active py-1 px-3 togglerList">
+							<span class="d-flex align-items-center">
+								<i class="bi bi-people-fill fs-4 me-2 ms-1"></i>
+								<span>Usuário</span>
+								<i class="bi bi-caret-down-fill ms-auto"></i>
+							</span>
+							<ul class="optionsList">
+								<li><a href="/usuarios">Listar</a></li>
+								<li><a th:href="@{/usuarios/cadastrar}">Cadastrar</a></li>
+							</ul>
+						</li>
+						<!-- Empresas -->
+						<li class="py-1 px-3 togglerList">
+							<span class="d-flex align-items-center">
+								<i class="bi bi-building-fill fs-4 me-2"></i>
+								<span>Empresa</span>
+								<i class="bi bi-caret-down-fill ms-auto"></i>
+							</span>
+							<ul class="optionsList">
+								<li><a href="/empresa">Listar</a></li>
+								<li><a th:href="@{/empresa/cadastrar}">Cadastrar</a></li>
+							</ul>
+						</li>
+						<!-- Vagas -->
+						<li class="py-1 px-3 togglerList">
+							<span class="d-flex align-items-center">
+								<i class="bi bi-briefcase-fill fs-4 me-2"></i>
+								<span>Vagas</span>
+								<i class="bi bi-caret-down-fill ms-auto"></i>
+							</span>
+							<ul class="optionsList">
+								<li><a href="/vagas">Listar</a></li>
+								<li><a th:href="@{/vagas/cadastrar}">Cadastrar</a></li>
+							</ul>
+						</li>
+						<!-- Candidaturas -->
+						<li class="py-1 px-3 togglerList">
+							<span class="d-flex align-items-center">
+								<i class="bi bi-bookmark-check-fill fs-4 me-2">
+								</i><span>Candidaturas</span>
+								<i class="bi bi-caret-down-fill ms-auto"></i>
+							</span>
+							<ul class="optionsList">
+								<li><a href="/usuarios">Listar</a></li>
+								<li><a th:href="@{/vagas/cadastrar}">Cadastrar</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="dropup-center dropup px-4 pb-4">
+					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						<i class="bi bi-person-circle fs-4 me-1"></i> Nome
+					</a>
+					<div class="dropdown-menu mx-4">
+						<a class="dropdown-item" href="#"><i class="bi bi-person"></i> Perfil</a>
+						<a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Configurações</a>
+						<hr class="dropdown-divider">
+						<a class="dropdown-item" href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+					</div>
+				</div>
+			</div>
+			<!-- Fim Offcanvas -->
+		</div>
+	</nav>
+</header>
