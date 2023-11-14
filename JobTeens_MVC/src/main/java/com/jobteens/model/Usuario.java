@@ -17,7 +17,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_usuario")
-	private int idUsuario;
+	private Long idUsuario;
 
 	@Column(nullable = false, length = 80)
 	private String nome;
@@ -45,7 +45,7 @@ public class Usuario {
 		super();
 	}
 
-	public Usuario(int idUsuario, String nome, String senha, String cpf, String email, String telefone,
+	public Usuario(Long idUsuario, String nome, String senha, String cpf, String email, String telefone,
 			String endereco) {
 		super();
 		this.idUsuario = idUsuario;
@@ -58,11 +58,11 @@ public class Usuario {
 	}
 
 	// Métodos gets and sets
-	public int getIdUsuario() {
+	public Long getIdUsuario() {
 		return idUsuario;
 	}
 
-	public void setIdUsuario(int id_usuário) {
+	public void setIdUsuario(Long id_usuário) {
 		this.idUsuario = id_usuário;
 	}
 

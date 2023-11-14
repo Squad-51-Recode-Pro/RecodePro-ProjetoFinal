@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.jobteens.model.Empresa;
 import com.jobteens.repository.EmpresaRepository;
 
+
 @Controller
 @RequestMapping("/empresa")
 public class EmpresaController {

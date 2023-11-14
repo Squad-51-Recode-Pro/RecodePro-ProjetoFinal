@@ -17,7 +17,7 @@ public class Empresa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_empresa")
-	private int idEmpresa;
+	private Long idEmpresa;
 
 	@Column(name = "nome_empresa", nullable = false, length = 80)
 	private String nomeEmpresa;
@@ -45,7 +45,7 @@ public class Empresa {
 		super();
 	}
 
-	public Empresa(int idEmpresa, String nomeEmpresa, String emailCoorporativo, String cnpj, String senha,
+	public Empresa(Long idEmpresa, String nomeEmpresa, String emailCoorporativo, String cnpj, String senha,
 			String endereco, String areaAtuacao, List<Vagas> vaga) {
 		super();
 		this.idEmpresa = idEmpresa;
@@ -58,14 +58,12 @@ public class Empresa {
 		Vaga = vaga;
 	}
 
-
-
 	// Métodos gets and sets
-	public int getIdEmpresa() {
+	public Long getIdEmpresa() {
 		return idEmpresa;
 	}
 
-	public void setIdEmpresa(int idEmpresa) {
+	public void setIdEmpresa(Long idEmpresa) {
 		this.idEmpresa = idEmpresa;
 	}
 

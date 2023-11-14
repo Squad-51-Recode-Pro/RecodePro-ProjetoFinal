@@ -27,7 +27,7 @@ public class Vagas {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_vagas")
-	private int idVagas;
+	private Long idVagas;
 
 	@Column(nullable = false)
 	@NumberFormat(style = Style.CURRENCY, pattern = "#,##0.00")
@@ -59,7 +59,7 @@ public class Vagas {
 		super();
 	}
 
-	public Vagas(int idVagas, BigDecimal salario, String requisitos, String descricao, String tituloVaga,
+	public Vagas(Long idVagas, BigDecimal salario, String requisitos, String descricao, String tituloVaga,
 			LocalDate dataPublicacao, Empresa empresa, List<Candidatura> candidaturas) {
 		super();
 		this.idVagas = idVagas;
@@ -73,11 +73,11 @@ public class Vagas {
 	}
 
 	// Métodos gets and sets
-	public int getIdVagas() {
+	public Long getIdVagas() {
 		return idVagas;
 	}
 
-	public void setIdVagas(int idVagas) {
+	public void setIdVagas(Long idVagas) {
 		this.idVagas = idVagas;
 	}
 

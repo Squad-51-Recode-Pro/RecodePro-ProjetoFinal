@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head th:replace="~{fragments/head :: head ('JobTeens | Usuários')}"></head>
+<head th:replace="~{fragments/head :: head ('JobTeens | Usuários', 'style')}"></head>
 
 <body>
+	<!-- Aside -->
 	<header th:replace="~{fragments/header :: header}"></header>
 
 	<main>
@@ -12,7 +13,7 @@
 				<div class="col-sm-12">
 					<div class="card border-0 shadow">
 						<div class="card-header p-4 border-0">
-							<h5>Listagem Usuários</h5>
+							<h4>Usuários</h4>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
@@ -53,18 +54,15 @@
 													th:id="'confirmDeleteModal-' + ${usuario.idUsuario}" tabindex="-1"
 													aria-labelledby="deleteModalLabel" aria-hidden="true">
 													<div class="modal-dialog">
-														<div class="modal-content p-3">
-															<div class="modal-header">
-																<h5 class="modal-title" id="deleteModalLabel">Confirme
-																	Exclusão</h5>
-																<button type="button" class="btn-close"
-																	data-bs-dismiss="modal" aria-label="Close"></button>
+														<div class="modal-content align-items-center p-3">
+															<img src="/img/alert_delete.png" height="115" width="111" />
+															<div class="modal-body text-center">
+																<div class="modalTitle">Tem a certeza?</div>
+																<span>Deseja excluir
+																	<span th:text="${usuario.nome}"></span>?
+																</span>
 															</div>
-															<div class="modal-body text-center mt-3">
-																<span class="fs-5">Tem certeza que deseja excluir <span
-																		th:text="${usuario.nome}"></span>?</span>
-															</div>
-															<div class="p-4 d-flex gap-2 justify-content-center">
+															<div class="p-2 d-flex gap-2 justify-content-center">
 																<a type="button"
 																	th:href="@{/usuarios/{id}/excluir (id=${usuario.idUsuario})}"
 																	class="btn btn-danger">Confirmar</a>
@@ -87,7 +85,19 @@
 		</section>
 	</main>
 
-
+	<!-- Rodapé -->
+	<footer>
+		<div class="container-fluid d-flex justify-content-between pt-3">
+			<span>
+				<p>&copy; 2023 JobTeens. Todos os direitos reservados.</p>
+			</span>
+			<div>
+				<i class="bi bi-facebook fs-5 pe-1"></i>
+				<i class="bi bi-instagram fs-5 pe-1"></i>
+				<i class="bi bi-twitter fs-5"></i>
+			</div>
+		</div>
+	</footer>
 	<!-- JavaScripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

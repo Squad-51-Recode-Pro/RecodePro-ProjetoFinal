@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head th:replace="~{fragments/head :: head ('JobTeens | Empresa', 'style')}"></head>
+<head th:replace="~{fragments/head :: head ('JobTeens | Candidaturas', 'style')}"></head>
 
 <body>
 	<!-- Aside -->
@@ -13,7 +13,7 @@
 				<div class="col-sm-12">
 					<div class="card border-0 shadow">
 						<div class="card-header p-4 border-0">
-							<h4>Empresas</h4>
+							<h4>Candidaturas</h4>
 						</div>
 						<div class="card-body">
 							<div class="table-responsive">
@@ -21,53 +21,53 @@
 									<thead>
 										<tr>
 											<th scope="col">ID</th>
+											<th scope="col">Usuário</th>
+											<th scope="col">Vaga</th>
 											<th scope="col">Empresa</th>
-											<th scope="col">CNPJ</th>
-											<th scope="col">E-mail Coorporativo</th>
-											<th scope="col">Área Atuação</th>
-											<th scope="col">Endereço</th>
+											<th scope="col">Data da Candidatura</th>
 											<th scope="col">Opções</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr th:each="empresa : ${empresas}">
-											<th scope="row" th:text="${empresa.idEmpresa}"></th>
-											<td th:text="${empresa.nomeEmpresa}"></td>
-											<td th:text="${empresa.cnpj}"></td>
-											<td th:text="${empresa.emailCoorporativo}"></td>
-											<td th:text="${empresa.areaAtuacao}"></td>
-											<td th:text="${empresa.endereco}"></td>
+										<tr th:each="candidatura : ${candidaturas}">
+											<th scope="row" th:text="${candidatura.idCandidatura}"></th>
+											<td th:text="${candidatura.usuario.nome}"></td>
+											<td th:text="${candidatura.vagas.tituloVaga}"></td>
+											<td th:text="${candidatura.vagas.empresa.nomeEmpresa}"></td>
+											<td th:text="${candidatura.dataCandidatura}"></td>
 											<td class="d-flex gap-2">
-												<!-- Âncora Modal-->
 												<a class="btn btn-primary d-flex my-auto" title="Editar"
-													th:href="@{/empresa/{id}/editar (id=${empresa.idEmpresa})}">
+													th:href="@{/candidaturas/{id}/editar (id=${candidatura.idCandidatura})}">
 													<i class="bi bi-pencil-square me-1"></i>
 													Editar
 												</a>
 												<!-- Âncora Modal Delete-->
 												<a class="btn btn-danger d-flex my-auto" data-bs-toggle="modal"
-													th:data-bs-target="'#confirmDeleteModal-' + ${empresa.idEmpresa}">
+													th:data-bs-target="'#confirmDeleteModal-' + ${candidatura.idCandidatura}">
 													<i class="bi bi-trash3 me-1"></i>Excluir
 												</a>
 												<!-- Inicio Modal Delete -->
 												<div class="modal fade"
-													th:id="'confirmDeleteModal-' + ${empresa.idEmpresa}" tabindex="-1"
-													aria-labelledby="deleteModalLabel" aria-hidden="true">
+													th:id="'confirmDeleteModal-' + ${candidatura.idCandidatura}"
+													tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
 													<div class="modal-dialog">
 														<div class="modal-content align-items-center p-3">
 															<img src="/img/alert_delete.png" height="115" width="111" />
 															<div class="modal-body text-center">
 																<div class="modalTitle">Tem a certeza?</div>
-																<span>Deseja excluir a empresa
-																	<span th:text="${empresa.nomeEmpresa}"></span>?
+																<span>Deseja excluir a candidatura do(a)
+																	<span th:text="${candidatura.usuario.nome}"></span>
+																	a vaga de
+																	<span
+																		th:text="${candidatura.vagas.tituloVaga}"></span>?
 																</span>
 															</div>
 															<div class="p-2 d-flex gap-2 justify-content-center">
 																<a type="button"
-																	th:href="@{/empresa/{id}/excluir (id=${empresa.idEmpresa})}"
+																	th:href="@{/candidaturas/{id}/excluir (id=${candidatura.idCandidatura})}"
 																	class="btn btn-danger">Confirmar</a>
 																<a type="button" class="btn btn-primary"
-																	href="/empresa">Cancelar</a>
+																	href="/candidaturas">Cancelar</a>
 															</div>
 														</div>
 													</div>
@@ -84,7 +84,6 @@
 			</div>
 		</section>
 	</main>
-
 	<!-- Rodapé -->
 	<footer>
 		<div class="container-fluid d-flex justify-content-between pt-3">
@@ -98,6 +97,7 @@
 			</div>
 		</div>
 	</footer>
+
 	<!-- JavaScripts -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

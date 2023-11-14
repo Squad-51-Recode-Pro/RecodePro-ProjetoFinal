@@ -1,19 +1,302 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head th:replace="~{fragments/head :: head ('JobTeens')}"></head>
+<head th:replace="~{fragments/head :: head ('JobTeens', 'style2')}"></head>
 
-<body>		
+<body>
+	<!-- NavBar -->
+	<nav th:replace="~{fragments/navbar :: nav}"></nav>
+
+	<!-- Corpo da página [Início] -->
+	<main>
+		<section class="container-fluid px-0">
+			<div class="bg-home shadow d-flex align-items-end p-0 row">
+				<div class="containerHome col-lg-5">
+					<h2>Bem vindo à <span class="textLogo">JobTeens</span></h2>
+					<h6 class="lead">Inicie sua jornada profissional conosco!</h6>
+				</div>
+			</div>
+		</section>
+
+		<section class="container-fluid py-5 bgHomeTwo shadow">
+			<div class="row">
+				<div class="col-md-3">
+					<i class="bi bi-people-fill fs-1 iconHome"></i>
+					<h5>Vagas Exclusivas para Jovens</h5>
+					<p>Oportunidades feitas sob medida para jovens em buscam de inserção
+						no mercado de trabalho.</p>
+				</div>
+				<div class="col-md-3">
+					<i class="bi bi-check-circle-fill fs-1 iconHome"></i>
+					<h5>Candidatura Simplificado</h5>
+					<p>Processo de candidatura fácil e intuitivo, tornando mais simples a
+						sua busca por emprego.</p>
+				</div>
+				<div class="col-md-3">
+					<i class="bi bi-building-fill-check fs-1 iconHome"></i>
+					<h5>Acesso a Empresas Promissoras</h5>
+					<p>Oferecemos a oportunidade de trabalhar com as melhores
+						organizações.</p>
+				</div>
+				<div class="col-md-3">
+					<i class="bi bi-chat-square-dots-fill fs-1 iconHome"></i>
+					<h5>Feedback e Acompanhamento</h5>
+					<p>Acompanhe o progresso das suas candidaturas e mantenha-se
+						informado.</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container-fluid p-4">
+			<div class="row pt-4">
+				<div class="col-md-8">
+					<h2>Oportunidades para você</h2>
+					<div class="card mt-4 my-3 shadow border-0">
+						<div class="card-body">
+							<h5 class="card-title">Analista de Sistemas</h5>
+							<p class="card-text">Os analistas de sistemas estudam os diversos sistemas existentes
+								entre hardwares, softwares e o usuário final.</p>
+							<a href="vagas/vagasdisponiveis" class="btn btnGroup">Conferir</a>
+						</div>
+					</div>
+
+					<div class="card my-3 shadow border-0">
+						<div class="card-body">
+							<h5 class="card-title">Engenheiro de Software</h5>
+							<p class="card-text">O engenheiro de software é o profissional que desenvolve programas,
+								firmware, aplicativos, scripts e sistemas afins.</p>
+							<a href="vagas/vagasdisponiveis" class="btn btnGroup">Conferir</a>
+						</div>
+					</div>
+
+					<div class="card my-3 shadow border-0">
+						<div class="card-body">
+							<h5 class="card-title">Engenheiro Civil</h5>
+							<p class="card-text">Engenharia Civil é o responsável por todo processo construtivo da
+								obra, sendo assim irá atuar com projeção e construção.</p>
+							<a href="vagas/vagasdisponiveis" class="btn btnGroup">Conferir</a>
+						</div>
+					</div>
+
+					<!-- Card 2 -->
+					<div class="my-4">
+						<h2>Áreas profissionais populares</h2>
+						<!-- Inicio do Carousel -->
+						<div id="carouselAreas" class="carousel slide" data-bs-ride="carousel">
+							<div class="carousel-inner shadow my-4 rounded-3">
+								<!-- Área Profissional 1 -->
+								<div class="carousel-item active">
+									<div class="card border-0">
+										<div class="row g-0">
+											<div class="col-md-4">
+												<img src="/img/img_card_home_TI.jpg" class="card-img" height="250"
+													width="100" alt="TI">
+											</div>
+											<div class="col-md-8">
+												<div class="card-body py-4">
+													<h5 class="card-title">Tecnologia da Informação</h5>
+													<p class="card-text pt-3">Lorem ipsum dolor sit amet consectetur
+														adipisicing elit. Mollitia fugit nulla, pariatur repellendus
+														eaque, aliquam
+														repellat. Lorem ipsum dolor sit amet consectetur
+														adipisicing. Mollitia fugit nulla, aliquam
+														repellat.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="card border-0">
+										<div class="row g-0">
+											<div class="col-md-4">
+												<img src="/img/img_card_home_adm.jpg" class="card-img" height="250"
+													width="100" alt="administração">
+											</div>
+											<div class="col-md-8">
+												<div class="card-body py-4">
+													<h5 class="card-title">Administração</h5>
+													<p class="card-text pt-3">Lorem ipsum dolor sit amet consectetur
+														adipisicing elit. Mollitia fugit nulla, pariatur repellendus
+														eaque, aliquam
+														repellat. Lorem ipsum dolor sit amet consectetur
+														adipisicing. Mollitia fugit nulla, aliquam
+														repellat.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="carousel-item">
+									<div class="card border-0">
+										<div class="row g-0">
+											<div class="col-md-4">
+												<img src="/img/img_card_home_comercio.jpg" class="card-img" height="250"
+													width="100" alt="comércio-vendas">
+											</div>
+											<div class="col-md-8">
+												<div class="card-body py-4">
+													<h5 class="card-title">Vendas e Comércio</h5>
+													<p class="card-text pt-3">Lorem ipsum dolor sit amet consectetur
+														adipisicing elit. Mollitia fugit nulla, pariatur repellendus
+														eaque, aliquam
+														repellat. Lorem ipsum dolor sit amet consectetur
+														adipisicing. Mollitia fugit nulla, aliquam
+														repellat.
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselAreas"
+								data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Anterior</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselAreas"
+								data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Próximo</span>
+							</button>
+						</div>
+						<!-- Fim do Carousel -->
+					</div>
+				</div>
+
+				<!-- Acordeão -->
+				<aside class="col-md-4">
+					<h3>Trilha do sucesso</h3>
+					<h6>Tudo para alavancar sua carreira</h6>
+					<div class="accordion rounded-4 shadow border-0" id="accordionPanelsStayOpenExample">
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingOne">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+									aria-controls="panelsStayOpen-collapseOne">
+									<strong>Recode</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingOne">
+								<div class="accordion-body">
+									Organização de impacto social que promove a capacitação tecnológica de
+									comunidades de baixa renda para o exercício da cidadania.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+									aria-controls="panelsStayOpen-collapseTwo">
+									<strong>EducarMais</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+								aria-labelledby="panelsStayOpen-headingTwo">
+								<div class="accordion-body">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nesciunt
+									consectetur iure soluta vitae facilis maxime mollitia culpa alias possimus
+									facere omnis, repudiandae dolores perspiciatis sint officia commodi ad minima.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+									aria-controls="panelsStayOpen-collapseThree">
+									<strong>ProgramaAvançar</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+								aria-labelledby="panelsStayOpen-headingThree">
+								<div class="accordion-body">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt asperiores
+									soluta, sunt et nisi esse totam. Accusamus reprehenderit, a dolor officia nam
+									soluta aliquid laborum eligendi quo quos praesentium cumque.
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item">
+							<h2 class="accordion-header" id="panelsStayOpen-headingFor">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#panelsStayOpen-collapseFor" aria-expanded="false"
+									aria-controls="panelsStayOpen-collapseFor">
+									<strong>Veja mais</strong>
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapseFor" class="accordion-collapse collapse"
+								aria-labelledby="panelsStayOpen-headingFor">
+								<div class="list-group custom-list rounded-bottom">
+									<a href="#" class="list-group-item list-group-item-action">A second link
+										item</a>
+									<a href="#" class="list-group-item list-group-item-action">A third link item</a>
+									<a href="#" class="list-group-item list-group-item-action">A fourth link
+										item</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</section>
+
+		<section>
+			<div class="container-fluid bgTime py-5">
+				<hr>
+				<div class="mt-5 mx-3 text-center">
+					<h1>Nosso Time</h1>
+					<div class="row mt-4">
+						<div class="col-md-3">
+							<img src="img/img_nossotime_man3.jpg" alt="John Tarly"
+								class="bd-placeholder-img rounded-circle" width="150" height="150">
+							<h4>John Tarly</h4>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-md-3">
+							<img src="img/img_nossotime_man2.jpg" alt="Tom Sunderland"
+								class="bd-placeholder-img rounded-circle" width="150" height="150">
+							<h4>Tom Sunderland</h4>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-md-3">
+							<img src="img/img_nossotime_man1.jpg" alt="Samuel Hardy"
+								class="bd-placeholder-img rounded-circle" width="150" height="150">
+							<h4>Samuel Hardy</h4>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						</div>
+						<div class="col-md-3">
+							<img src="img/img_nossotime_woman.jpg" alt="Manuella Nevoresky"
+								class="bd-placeholder-img rounded-circle" width="150" height="150">
+							<h4>Manuella Nevoresky</h4>
+							<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<!-- Corpo da página [Fim] -->
 	
-	<header th:replace="~{fragments/header :: header}"></header>
-	
+	<!-- Rodapé -->
+	<footer th:replace="~{fragments/footer :: footer}"></footer>
 	
 	<!-- JavaScripts -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
 		crossorigin="anonymous"></script>
-	<script src="js/scripts.js"></script>
+
 </body>
 
 </html>

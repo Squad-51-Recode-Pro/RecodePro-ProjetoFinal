@@ -1,0 +1,222 @@
+/** Fonts Google **/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/** Estilo corpo páginas **/
+:root {
+	--bg-color: #18d39a;
+	--text-color-white: white;
+	--text-color-black: black;
+	--text-color-white: white;
+	--text-color-green: #18d39a;
+	--text-color-darkblue: #476370;
+	--color-btn: #18d39a;
+	--bg-color-Two: #476370;
+	--bg-color-Three: #f3fcf9;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Noto Sans', sans-serif;
+}
+
+/** Style navbar **/
+.titleNav {
+	text-decoration: none;
+	font-weight: 700;
+	padding-top: 5px;
+	color: var(--text-color-green) !important;
+	cursor: pointer;
+}
+
+.titleNav:hover {
+	color: var(--text-color-darkblue) !important;
+}
+
+.nav-link {
+	padding-right: 17px !important;
+	font-weight: 600 !important;
+}
+
+.nav-link:hover {
+	color: var(--text-color-green) !important;
+}
+
+.navbar {
+	background-color: white !important;
+}
+
+.btnNav {
+	color: var(--bg-color) !important;
+}
+
+
+.dropdown-menu a:hover {
+	color: var(--text-color-white) !important;
+	background-color: var(--bg-color);
+}
+
+/** Style Home **/
+.textLogo {
+	color: var(--text-color-green);
+	font-weight: 700;
+}
+
+.bg-home {
+	background: url(/img/bg_home.jpg) no-repeat center/cover;
+	height: 22rem;
+	color: var(--text-color-white);
+	padding: 200px 30px 0px 30px !important;
+}
+
+.containerHome {
+	background: var(--bg-color-Two);
+	padding: 20px 50px 16px 30px !important;
+	border-radius: 0px 14px 0px 0px !important;
+}
+
+.bgHomeTwo {
+	background-color: var(--bg-color);
+	color: var(--text-color-white);
+	border-radius: 0px 0px 14px 14px !important;
+	text-align: center;
+}
+
+.bgHomeTwo p {
+	font-size: 14px;
+}
+
+.iconHome {
+	color: var(--bg-color-Three);
+}
+
+.iconHome:hover {
+	color: var(--bg-color-Two);
+}
+
+.text-muted {
+	font-size: 14px;
+}
+
+.btnGroup {
+	background-color: var(--bg-color) !important;
+	color: var(--text-color-white) !important;
+	font-weight: 600 !important;
+}
+
+.btnGroup:hover {
+	background-color: var(--bg-color-Two) !important;
+}
+
+/** Style Footer **/
+.footerStyle {
+	background-color: var(--bg-color-Two);
+	padding: 15px 0 0;
+	bottom: 0;
+	font-size: 13px;
+	color: var(--text-color-white);
+	box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 12px 12px 0px 0px !important;
+}
+
+.style-list {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.style-list li {
+	padding-top: 5px;
+}
+
+.style-list li:hover {
+	color: var(--text-color-green);
+	cursor: pointer;
+}
+
+.textStyleFooter h6 {
+	font-weight: 700;
+}
+
+.hoverFooter i:hover {
+	color: var(--text-color-green);
+	cursor: pointer;
+}
+
+.btn-footer {
+	background-color: var(--bg-color) !important;
+	color: var(--text-color-white) !important;
+	font-weight: 600 !important;
+}
+
+.btn-footer:hover {
+	background-color: var(--bg-color-Three) !important;
+	color: var(--text-color-darkblue) !important;
+}
+
+/** Style Card **/
+.card-header {
+	background: var(--bg-color-Three) !important;
+}
+
+/** Style vagas **/
+.bgVagas {
+	background: url(/img/bg_vaga.jpg) no-repeat center/cover;
+	height: 25rem;
+	color: var(--text-color-white);
+	border-radius: 0px 0px 14px 14px !important;
+}
+
+.bgColorForm {
+	background-color: var(--bg-color);
+	border-radius: 0px 0px 14px 14px !important;
+	margin: 100px 0 0 0 !important;
+}
+
+.btnGroupTwo {
+	background-color: var(--bg-color-Three) !important;
+	color: var(--text-color-green) !important;
+	font-weight: 600 !important;
+}
+
+.btnGroupTwo:hover {
+	color: var(--text-color-darkblue) !important;
+}
+
+.contentTitle {
+	padding: 170px 0 0 0;
+}
+
+/** Style Sobre **/
+.bgSobre {
+	background: url(/img/bg_sobre.jpg) no-repeat center/cover;
+	height: 22rem;
+	padding: 170px 0 0 0;
+	color: var(--text-color-white);
+	border-radius: 0px 0px 14px 14px !important;
+}
+
+.paragrafy {
+	text-align: justify;
+}
+
+/** Style Projeto **/
+.bgProjeto {
+	background: url(/img/bg_projeto&cursos.jpg) no-repeat center/cover;
+	height: 22rem;
+	color: var(--text-color-white);
+	padding: 170px 0 0 0;
+	border-radius: 0px 0px 14px 14px !important;
+}
+
+.img-card-projeto {
+    max-width: 100%;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+    border-radius: 14px 14px 14px 14px !important;
+}
+
+
+

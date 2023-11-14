@@ -41,7 +41,7 @@ public class UsuarioController {
 	// Cadastrar usuários
 	@PostMapping("/cadastrar")
 	public String cadastrar(Usuario usuario) {
-
+		
 		usuarioRepository.save(usuario);
 
 		return "redirect:/usuarios";

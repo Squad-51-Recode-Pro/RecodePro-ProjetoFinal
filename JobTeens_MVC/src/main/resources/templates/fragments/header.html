@@ -2,7 +2,7 @@
 	<nav class="navbar shadow py-2">
 		<div class="container-fluid d-flex">
 			<h4>
-				<a class="titleNav d-flex align-items-center" href="#">
+				<a class="titleNav d-flex align-items-center" href="/">
 					<img src="/img/logo.png" height="50" width="50">
 					JobTeens
 				</a>
@@ -68,8 +68,8 @@
 								<i class="bi bi-caret-down-fill ms-auto"></i>
 							</span>
 							<ul class="optionsList">
-								<li><a href="/usuarios">Listar</a></li>
-								<li><a th:href="@{/vagas/cadastrar}">Cadastrar</a></li>
+								<li><a href="/candidaturas">Listar</a></li>
+								<li><a th:href="@{/candidaturas/cadastrar}">Cadastrar</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -77,7 +77,7 @@
 				<div class="dropup-center dropup px-4 pb-4">
 					<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
 						aria-expanded="false">
-						<i class="bi bi-person-circle fs-4 me-1"></i> Nome
+						<i class="bi bi-person-circle fs-4 me-1"></i> User
 					</a>
 					<div class="dropdown-menu mx-4">
 						<a class="dropdown-item" href="#"><i class="bi bi-person"></i> Perfil</a>

@@ -22,7 +22,7 @@ public class Candidatura {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_candidatura")
-	private int idCandidatura;
+	private Long idCandidatura;
 
 	@CreationTimestamp
 	@Column(name = "data_candidatura")
@@ -42,19 +42,19 @@ public class Candidatura {
 		super();
 	}
 
-	public Candidatura(int idCandidatura, LocalDate dataCandidatura, Usuario usuario) {
+	public Candidatura(Long idCandidatura, LocalDate dataCandidatura, Usuario usuario, Vagas vagas) {
 		super();
 		this.idCandidatura = idCandidatura;
 		this.dataCandidatura = dataCandidatura;
 		this.usuario = usuario;
+		this.vagas = vagas;
 	}
 
-	// Métodos gets and sets
-	public int getIdCandidatura() {
+	public Long getIdCandidatura() {
 		return idCandidatura;
 	}
 
-	public void setIdCandidatura(int idCandidatura) {
+	public void setIdCandidatura(Long idCandidatura) {
 		this.idCandidatura = idCandidatura;
 	}
 
@@ -72,5 +72,13 @@ public class Candidatura {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public Vagas getVagas() {
+		return vagas;
+	}
+
+	public void setVagas(Vagas vagas) {
+		this.vagas = vagas;
 	}
 }

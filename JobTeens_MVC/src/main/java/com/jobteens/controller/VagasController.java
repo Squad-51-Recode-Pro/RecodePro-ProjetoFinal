@@ -32,6 +32,14 @@ public class VagasController {
 		return modelAndView;
 	}
 
+	// Listar vagas no arquivo vagas.html
+	@GetMapping("/vagasdisponiveis")
+	public ModelAndView outraRota() {
+		ModelAndView modelAndView = new ModelAndView("/vagas");
+		modelAndView.addObject("vagas", vagasRepository.findAll());
+		return modelAndView;
+	}
+
 	// Cadastrar vagas
 	@GetMapping("/cadastrar")
 	public ModelAndView cadastrar() {
