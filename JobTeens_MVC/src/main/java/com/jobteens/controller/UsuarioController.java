@@ -10,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jobteens.model.Usuario;
 import com.jobteens.repository.UsuarioRepository;
+import com.jobteens.utils.SenhaUtils;
 
 @Controller
 @RequestMapping("/usuarios")
@@ -41,7 +42,9 @@ public class UsuarioController {
 	// Cadastrar usuários
 	@PostMapping("/cadastrar")
 	public String cadastrar(Usuario usuario) {
+		String senhaEncriptada = SenhaUtils.encoder(usuario.getSenha());
 		
+		usuario.setSenha(senhaEncriptada);
 		usuarioRepository.save(usuario);
 
 		return "redirect:/usuarios";

@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.jobteens.model.Empresa;
 import com.jobteens.repository.EmpresaRepository;
-
+import com.jobteens.utils.SenhaUtils;
 
 @Controller
 @RequestMapping("/empresa")
@@ -41,7 +41,9 @@ public class EmpresaController {
 	// Cadastrar empresa
 	@PostMapping("/cadastrar")
 	public String cadastrar(Empresa empresa) {
+		String senhaEncriptada = SenhaUtils.encoder(empresa.getSenha());
 
+		empresa.setSenha(senhaEncriptada);
 		empresaRepository.save(empresa);
 
 		return "redirect:/empresa";

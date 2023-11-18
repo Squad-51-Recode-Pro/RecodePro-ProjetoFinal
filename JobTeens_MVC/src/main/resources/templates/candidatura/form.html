@@ -24,15 +24,12 @@
 										th:field="*{idCandidatura}">
 								</div>
 
-
-
-
 								<div class="form-floating mt-4 mb-3 mx-3">
 									<select th:field="*{vagas}" class="form-control" id="vagas">
 										<option th:each="vaga : ${vagas}" th:text="${vaga.tituloVaga}"
 											th:value="${vaga.idVagas}"></option>
 									</select>
-									<label for="vagas">Vagas</label>
+									<label for="vagas">Selecione Vaga</label>
 								</div>
 
 								<div class="form-floating mt-4 mb-3 mx-3">
@@ -40,7 +37,7 @@
 										<option th:each="usuario : ${usuarios}" th:text="${usuario.nome}"
 											th:value="${usuario.idUsuario}"></option>
 									</select>
-									<label for="usuario">Usuários</label>
+									<label for="usuario">Selecione Usuário</label>
 								</div>
 
 								<div class="form-floating mt-4 mb-3 mx-3">

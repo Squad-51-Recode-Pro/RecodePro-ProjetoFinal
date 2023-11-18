@@ -20,7 +20,7 @@
 					<a class="nav-link" href="/projetocursos">Projetos&Cursos</a>
 					<a class="nav-link" href="/sobrenos">Sobre nós</a>
 					<form class="d-flex flex-column flex-lg-row gap-2" role="search">
-						<a href="login.html" class="btn btnGroup">
+						<a href="/login" class="btn btnGroup">
 							<i class="bi bi-box-arrow-in-right"></i>
 							Login
 						</a>
@@ -28,11 +28,11 @@
 						<div class="dropdown d-flex flex-column flex-lg-row">
 							<a class="btn btnGroupTwo dropdown-toggle p-2 border-0 flex-fill" id="cadastroDropdown"
 								data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="bi bi-person-gear"></i> Admin
+								<i class="bi bi-person-plus"></i> Cadastre-se
 							</a>
 							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="cadastroDropdown">
-								<li><a class="dropdown-item" href="/usuarios"><i class="bi bi-gear"></i> Painel de
-										Administrador</a></li>
+								<li><a class="dropdown-item" th:href="@{/usuarios/cadastrar}"><i class="bi bi-people"></i> Usuário</a></li>
+								<li><a class="dropdown-item" th:href="@{/empresa/cadastrar}"><i class="bi bi-building"></i> Empresa</a></li>
 							</ul>
 						</div>
 					</form>

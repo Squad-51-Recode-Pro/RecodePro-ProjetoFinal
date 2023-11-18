@@ -15,4 +15,9 @@ public class RotasController {
 	public String sobreNos() {
 		return "sobrenos";
 	}
+
+	@GetMapping("/login")
+	public String login() {
+		return "login/login";
+	}
 }

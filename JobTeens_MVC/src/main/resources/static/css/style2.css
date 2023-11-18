@@ -51,6 +51,10 @@
 	color: var(--bg-color) !important;
 }
 
+.dropdown-menu a {
+	color: var(--text-color-darkblue);
+	font-weight: 600;
+}
 
 .dropdown-menu a:hover {
 	color: var(--text-color-white) !important;
@@ -210,13 +214,59 @@
 }
 
 .img-card-projeto {
-    max-width: 100%;
-    height: 100%;
-    width: auto;
-    object-fit: cover;
-    margin-bottom: 0;
-    border-radius: 14px 14px 14px 14px !important;
+	max-width: 100%;
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+	margin-bottom: 0;
+	border-radius: 14px 14px 14px 14px !important;
 }
 
+/** Style Login **/
+.bgLogin {
+	background: linear-gradient(to bottom, var(--bg-color), var(--bg-color-Two));
+	overflow: hidden;
+}
 
+.area-login {
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
 
+.login {
+	background: rgba(255, 255, 255, 0.1);
+	width: 355px;
+	min-height: 440px;
+	padding: 35px;
+	border-radius: 15px;
+}
+
+.login form {
+	display: flex;
+	flex-direction: column;
+}
+
+.btnGroupThree {
+	background-color: var(--bg-color) !important;
+	color: var(--text-color-white) !important;
+	font-weight: 600 !important;
+}
+
+.btnGroupThree:hover {
+	background-color: var(--bg-color-Two) !important;
+	color: var(--text-color-white) !important;
+}
+
+.loginLogo {
+	color: var(--text-color-white);
+	font-weight: 600;
+}
+
+.textLogin {
+	text-align: start;
+	color: var(--text-color-white);
+	font-size: 12px;
+}
