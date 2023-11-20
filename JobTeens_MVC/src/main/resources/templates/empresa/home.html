@@ -26,7 +26,7 @@
 											<th scope="col">E-mail Coorporativo</th>
 											<th scope="col">Área Atuação</th>
 											<th scope="col">Endereço</th>
-											<th scope="col">Opções</th>
+											<th scope="col" sec:authorize="hasAuthority('EMPRESA')">Opções</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -40,13 +40,13 @@
 											<td class="d-flex gap-2">
 												<!-- Âncora Modal-->
 												<a class="btn btn-primary d-flex my-auto" title="Editar"
-													th:href="@{/empresa/{id}/editar (id=${empresa.idEmpresa})}">
+													th:href="@{/empresa/{id}/editar (id=${empresa.idEmpresa})}" sec:authorize="hasAuthority('EMPRESA')">
 													<i class="bi bi-pencil-square me-1"></i>
 													Editar
 												</a>
 												<!-- Âncora Modal Delete-->
 												<a class="btn btn-danger d-flex my-auto" data-bs-toggle="modal"
-													th:data-bs-target="'#confirmDeleteModal-' + ${empresa.idEmpresa}">
+													th:data-bs-target="'#confirmDeleteModal-' + ${empresa.idEmpresa}" sec:authorize="hasAuthority('EMPRESA')">
 													<i class="bi bi-trash3 me-1"></i>Excluir
 												</a>
 												<!-- Inicio Modal Delete -->

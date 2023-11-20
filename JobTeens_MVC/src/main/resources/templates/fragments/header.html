@@ -33,7 +33,7 @@
 							</span>
 							<ul class="optionsList">
 								<li><a href="/usuarios">Listar</a></li>
-								<li><a th:href="@{/usuarios/cadastrar}">Cadastrar</a></li>
+								<li><a th:href="@{/usuarios/cadastrar}" sec:authorize="hasAuthority('EMPRESA')">Cadastrar</a></li>
 							</ul>
 						</li>
 						<!-- Empresas -->
@@ -45,7 +45,7 @@
 							</span>
 							<ul class="optionsList">
 								<li><a href="/empresa">Listar</a></li>
-								<li><a th:href="@{/empresa/cadastrar}">Cadastrar</a></li>
+								<li><a th:href="@{/empresa/cadastrar}" sec:authorize="hasAuthority('EMPRESA')">Cadastrar</a></li>
 							</ul>
 						</li>
 						<!-- Vagas -->
@@ -57,7 +57,7 @@
 							</span>
 							<ul class="optionsList">
 								<li><a href="/vagas">Listar</a></li>
-								<li><a th:href="@{/vagas/cadastrar}">Cadastrar</a></li>
+								<li><a th:href="@{/vagas/cadastrar}" sec:authorize="hasAuthority('EMPRESA')" >Cadastrar</a></li>
 							</ul>
 						</li>
 						<!-- Candidaturas -->

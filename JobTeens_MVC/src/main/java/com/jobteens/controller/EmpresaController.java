@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.jobteens.enums.Perfil;
 import com.jobteens.model.Empresa;
 import com.jobteens.repository.EmpresaRepository;
 import com.jobteens.utils.SenhaUtils;
@@ -44,6 +45,8 @@ public class EmpresaController {
 		String senhaEncriptada = SenhaUtils.encoder(empresa.getSenha());
 
 		empresa.setSenha(senhaEncriptada);
+		empresa.setPerfil(Perfil.EMPRESA);
+		
 		empresaRepository.save(empresa);
 
 		return "redirect:/empresa";
@@ -61,7 +64,10 @@ public class EmpresaController {
 	// Editar empresa
 	@PostMapping("/{id}/editar")
 	public String editar(Empresa empresa) {
+		String senhaEncriptada = SenhaUtils.encoder(empresa.getSenha());
 
+		empresa.setSenha(senhaEncriptada);
+		
 		empresaRepository.save(empresa);
 		return "redirect:/empresa";
 	}

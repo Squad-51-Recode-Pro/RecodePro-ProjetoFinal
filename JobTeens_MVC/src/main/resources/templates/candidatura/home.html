@@ -25,7 +25,7 @@
 											<th scope="col">Vaga</th>
 											<th scope="col">Empresa</th>
 											<th scope="col">Data da Candidatura</th>
-											<th scope="col">Opções</th>
+											<th scope="col" sec:authorize="hasAuthority('EMPRESA')">Opções</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -37,13 +37,13 @@
 											<td th:text="${candidatura.dataCandidatura}"></td>
 											<td class="d-flex gap-2">
 												<a class="btn btn-primary d-flex my-auto" title="Editar"
-													th:href="@{/candidaturas/{id}/editar (id=${candidatura.idCandidatura})}">
+													th:href="@{/candidaturas/{id}/editar (id=${candidatura.idCandidatura})}" sec:authorize="hasAuthority('EMPRESA')">
 													<i class="bi bi-pencil-square me-1"></i>
 													Editar
 												</a>
 												<!-- Âncora Modal Delete-->
 												<a class="btn btn-danger d-flex my-auto" data-bs-toggle="modal"
-													th:data-bs-target="'#confirmDeleteModal-' + ${candidatura.idCandidatura}">
+													th:data-bs-target="'#confirmDeleteModal-' + ${candidatura.idCandidatura}" sec:authorize="hasAuthority('EMPRESA')">
 													<i class="bi bi-trash3 me-1"></i>Excluir
 												</a>
 												<!-- Inicio Modal Delete -->

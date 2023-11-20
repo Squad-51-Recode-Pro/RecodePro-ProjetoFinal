@@ -2,8 +2,12 @@ package com.jobteens.model;
 
 import java.util.List;
 
+import com.jobteens.enums.Perfil;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -37,6 +41,10 @@ public class Usuario {
 	@Column(nullable = false)
 	private String endereco;
 
+	@Column(name = "perfil_usuario", nullable = false)
+	@Enumerated(EnumType.STRING)
+	private Perfil perfil;
+
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.LAZY)
 	private List<Candidatura> candidaturas;
 
@@ -46,7 +54,7 @@ public class Usuario {
 	}
 
 	public Usuario(Long idUsuario, String nome, String senha, String cpf, String email, String telefone,
-			String endereco) {
+			String endereco, Perfil perfil, List<Candidatura> candidaturas) {
 		super();
 		this.idUsuario = idUsuario;
 		this.nome = nome;
@@ -55,6 +63,8 @@ public class Usuario {
 		this.email = email;
 		this.telefone = telefone;
 		this.endereco = endereco;
+		this.perfil = perfil;
+		this.candidaturas = candidaturas;
 	}
 
 	// Métodos gets and sets
@@ -112,5 +122,21 @@ public class Usuario {
 
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
+	}
+
+	public Perfil getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Perfil perfil) {
+		this.perfil = perfil;
+	}
+
+	public List<Candidatura> getCandidaturas() {
+		return candidaturas;
+	}
+
+	public void setCandidaturas(List<Candidatura> candidaturas) {
+		this.candidaturas = candidaturas;
 	}
 }

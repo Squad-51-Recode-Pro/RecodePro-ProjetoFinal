@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.jobteens.enums.Perfil;
 import com.jobteens.model.Usuario;
 import com.jobteens.repository.UsuarioRepository;
 import com.jobteens.utils.SenhaUtils;
@@ -43,8 +44,10 @@ public class UsuarioController {
 	@PostMapping("/cadastrar")
 	public String cadastrar(Usuario usuario) {
 		String senhaEncriptada = SenhaUtils.encoder(usuario.getSenha());
-		
+
 		usuario.setSenha(senhaEncriptada);
+		usuario.setPerfil(Perfil.USUARIO);
+
 		usuarioRepository.save(usuario);
 
 		return "redirect:/usuarios";
@@ -63,7 +66,9 @@ public class UsuarioController {
 	// Editar usuários
 	@PostMapping("/{id}/editar")
 	public String editar(Usuario usuario) {
+		String senhaEncriptada = SenhaUtils.encoder(usuario.getSenha());
 
+		usuario.setSenha(senhaEncriptada);
 		usuarioRepository.save(usuario);
 
 		return "redirect:/usuarios";

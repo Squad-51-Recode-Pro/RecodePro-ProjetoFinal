@@ -2,8 +2,12 @@ package com.jobteens.model;
 
 import java.util.List;
 
+import com.jobteens.enums.Perfil;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -36,6 +40,10 @@ public class Empresa {
 
 	@Column(name = "area_atuacao", nullable = false)
 	private String areaAtuacao;
+	
+	@Column(name = "perfil_empresa", nullable = false)
+	@Enumerated(EnumType.STRING)
+	private Perfil perfil;
 
 	@OneToMany(mappedBy = "empresa", fetch = FetchType.LAZY)
 	private List<Vagas> Vaga;
@@ -46,7 +54,7 @@ public class Empresa {
 	}
 
 	public Empresa(Long idEmpresa, String nomeEmpresa, String emailCoorporativo, String cnpj, String senha,
-			String endereco, String areaAtuacao, List<Vagas> vaga) {
+			String endereco, String areaAtuacao, Perfil perfil, List<Vagas> vaga) {
 		super();
 		this.idEmpresa = idEmpresa;
 		this.nomeEmpresa = nomeEmpresa;
@@ -55,6 +63,7 @@ public class Empresa {
 		this.senha = senha;
 		this.endereco = endereco;
 		this.areaAtuacao = areaAtuacao;
+		this.perfil = perfil;
 		Vaga = vaga;
 	}
 
@@ -121,5 +130,13 @@ public class Empresa {
 
 	public void setVaga(List<Vagas> vaga) {
 		Vaga = vaga;
+	}
+
+	public Perfil getPerfil() {
+		return perfil;
+	}
+
+	public void setPerfil(Perfil perfil) {
+		this.perfil = perfil;
 	}
 }

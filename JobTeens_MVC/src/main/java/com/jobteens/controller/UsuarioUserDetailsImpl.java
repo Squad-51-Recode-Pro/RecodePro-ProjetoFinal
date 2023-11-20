@@ -3,8 +3,10 @@ package com.jobteens.controller;
 import java.util.Collection;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.jobteens.enums.Perfil;
 import com.jobteens.model.Usuario;
 
 public class UsuarioUserDetailsImpl implements UserDetails {
@@ -23,7 +25,8 @@ public class UsuarioUserDetailsImpl implements UserDetails {
 	
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return null;
+		Perfil perfil = usuario.getPerfil();
+		return AuthorityUtils.createAuthorityList(perfil.toString());
 	}
 
 	@Override
