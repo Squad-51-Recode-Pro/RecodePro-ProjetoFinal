@@ -1,6 +1,5 @@
 package com.jobteens.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,16 +18,12 @@ import com.jobteens.service.UsuarioUserDetailsService;
 @EnableWebSecurity
 public class WebConfigProject {
 
-	@Autowired
-	private UsuarioUserDetailsService usuarioUserDetailsService;
-	@Autowired
-	private EmpresaUserDetailsService empresaUserDetailsService;
 
 	@Bean
 	public SecurityFilterChain configure(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests(authorize -> authorize
 				.requestMatchers("/img/**", "/js/**", "/css/**").permitAll()
-				.requestMatchers("/", "/vagas/vagasdisponiveis", "/projetocursos", "/sobrenos").permitAll()
+				.requestMatchers("/", "/vagas/vagasdisponiveis", "/carreira", "/sobrenos").permitAll()
 				.requestMatchers("/usuarios/cadastrar", "/empresa/cadastrar").permitAll()
 				.anyRequest().authenticated())
 

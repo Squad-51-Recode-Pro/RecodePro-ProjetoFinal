@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class RotasController {
 
-	@GetMapping("/projetocursos")
-	public String projetosCursos() {
-		return "projetocursos";
+	@GetMapping("/carreira")
+	public String Carreira() {
+		return "carreira";
 	}
 
 	@GetMapping("/sobrenos")

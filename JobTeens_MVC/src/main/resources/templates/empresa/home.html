@@ -38,7 +38,6 @@
 											<td th:text="${empresa.areaAtuacao}"></td>
 											<td th:text="${empresa.endereco}"></td>
 											<td class="d-flex gap-2">
-												<!-- Âncora Modal-->
 												<a class="btn btn-primary d-flex my-auto" title="Editar"
 													th:href="@{/empresa/{id}/editar (id=${empresa.idEmpresa})}" sec:authorize="hasAuthority('EMPRESA')">
 													<i class="bi bi-pencil-square me-1"></i>

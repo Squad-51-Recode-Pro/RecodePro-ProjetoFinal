@@ -43,7 +43,7 @@ public class Vagas {
 	private String tituloVaga;
 
 	@CreationTimestamp
-	@Column(name = "data_publicacap")
+	@Column(name = "data_publicacao")
 	@DateTimeFormat(iso = ISO.DATE)
 	private LocalDate dataPublicacao;
 
